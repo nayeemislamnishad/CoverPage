@@ -1,148 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment Cover Page</title>
-  <style>
-    /* Ensure same look while printing */
-    @media print {
-      body {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
-      .page {
-        width: 210mm;
-        height: 275mm;
-        margin: 0 auto;
-        box-shadow: none;
-        border: none;
-      }
-    }
-
-    body {
-      font-family: "Times New Roman", serif;
-      margin: 0;
-      background: #f9f9f9;
-    }
-
-    .page {
-      width: 210mm;
-      height: 275mm;
-      margin: 20px auto;
-      background: white;
-      padding: 40px;
-      border: 2px solid #006400;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      position: relative;
-    }
-
-    .header {
-      text-align: center;
-      padding-bottom: 20px;
-      border-bottom: 2px solid #006400;
-    }
-
-    .header h1 {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 10px 0;
-      color: #222;
-    }
-
-    .header h2 {
-      font-size: 18px;
-      font-weight: normal;
-      margin: 5px 0;
-      color: #444;
-    }
-
-    .course-info {
-      text-align: center;
-      margin: 25px 0;
-    }
-
-    .course-info p {
-      font-size: 16px;
-      margin: 6px 0;
-    }
-
-    .submitted-box, .submittedby-box {
-      width: 45%;
-      padding: 20px;
-      border-radius: 12px;
-      color: #000;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    .submitted-box {
-      float: left;
-      background: linear-gradient(135deg, #e6f7ff, #b3d9ff);
-    }
-
-    .submittedby-box {
-      float: right;
-      background: linear-gradient(135deg, #fff5e6, #ffd9b3);
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-    }
-
-    .footer img {
-      width: 100px;
-      margin-bottom: 10px;
-    }
-
-    .footer h3 {
-      margin: 0;
-      font-size: 20px;
-      color: #006400;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's & Obesity - Assignment Cover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#ffe5e7',
+                            100: '#fabac0',
+                            200: '#f18f98',
+                            300: '#e96271',
+                            400: '#e23649',
+                            500: '#c91d30',
+                            600: '#9d1526',
+                            700: '#710e1b',
+                            800: '#460610',
+                            900: '#1e0005',
+                        },
+                        secondary: {
+                            50: '#edf1fc',
+                            100: '#d3d4e1',
+                            200: '#b6b8c9',
+                            300: '#989bb2',
+                            400: '#7c7f9b',
+                            500: '#636582',
+                            600: '#4c4f66',
+                            700: '#363849',
+                            800: '#21222e',
+                            900: '#0a0a16',
+                        },
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e6eef7 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .main-card {
+            background: linear-gradient(to bottom right, #ffffff, #f9fafb);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.06);
+            padding: 3.5rem 2.5rem;
+            max-width: 1000px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+        }
+        
+        .main-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(to right, #c91d30, #e23649, #fabac0, #e23649, #c91d30);
+            z-index: 20;
+        }
+        
+        .pattern-dots {
+            background-image: radial-gradient(#c91d30 1.5px, transparent 1.5px);
+            background-size: 18px 18px;
+            opacity: 0.15;
+        }
+        
+        .header-section {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 2.5rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        
+        .content-box {
+            background: linear-gradient(145deg, #ffffff, #fafafa);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #c91d30, #e23649);
+        }
+        
+        .content-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .content-box:hover::before {
+            background: linear-gradient(to bottom, #c91d30, #e23649, #fabac0);
+        }
+        
+        .label-text {
+            color: #c91d30;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .decorative-line {
+            background: linear-gradient(to right, #c91d30, #e23649);
+            height: 3px;
+            width: 60px;
+            border-radius: 9999px;
+            margin: 0.75rem 0 1.5rem 0;
+        }
+        
+        .university-logo {
+            transition: all 0.5s ease;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+        }
+        
+        .university-logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.2));
+        }
+        
+        .floating-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, rgba(201, 29, 48, 0.1) 0%, rgba(226, 54, 73, 0.15) 100%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            width: 120px;
+            height: 120px;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(2) {
+            bottom: 15%;
+            right: 7%;
+            width: 80px;
+            height: 80px;
+            animation: float 7s ease-in-out infinite 1s;
+        }
+        
+        .floating-element:nth-child(3) {
+            top: 25%;
+            right: 10%;
+            width: 60px;
+            height: 60px;
+            animation: float 9s ease-in-out infinite 0.5s;
+        }
+        
+        .footer-section {
+            background: linear-gradient(to right, #f8f9fa, #f1f3f5);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        @media (max-width: 768px) {
+            .main-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .content-box {
+                padding: 1.75rem 1.5rem;
+            }
+            
+            .header-section h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .header-section h2 {
+                font-size: 2rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="page">
-    <div class="header">
-      <h1>An Assignment on Specific Nerve Blocks in Racing Horses</h1>
-      <h2>Course Code: SRA 401 | Course Title: Anesthesiology</h2>
+    <!-- Background elements -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    
+    <div class="main-card">
+        <!-- Header Section -->
+        <header class="header-section text-center">
+            <div class="pattern-dots absolute top-0 left-0 w-full h-full pointer-events-none"></div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight title-font">An Assignment</h1>
+            <div class="flex items-center justify-center my-4">
+                <div class="decorative-line mx-4"></div>
+                <p class="text-xl sm:text-2xl text-gray-600 font-medium"><i class="fas fa-book-open mr-2 text-primary-500"></i>on</p>
+                <div class="decorative-line mx-4"></div>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-1 title-font">McDonald's and Obesity</h2>
+            
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Khulna_University_of_Engineering_%26_Technology_logo.png" 
+                 alt="University Logo" 
+                 class="mx-auto w-28 sm:w-36 my-8 university-logo">
+                 
+            <div class="text-lg sm:text-xl text-gray-800 font-semibold max-w-2xl mx-auto">
+                <p class="mb-2"><i class="fas fa-book mr-2 text-primary-500"></i>Course No: MKT-5521</p>
+                <p><i class="fas fa-chalkboard-teacher mr-2 text-primary-500"></i>Course Title: Advertising & Sales Promotion</p>
+            </div>
+        </header>
+
+        <!-- Content Boxes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-12">
+            <!-- Submitted To Box -->
+            <div class="content-box">
+                <p class="label-text"><i class="fas fa-user-tie"></i>Submitted To:</p>
+                <div class="decorative-line"></div>
+                <ul class="text-base sm:text-lg text-gray-700 space-y-2.5 leading-relaxed">
+                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Mr. S.M. Arifuzzaman</li>
+                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Associate Professor</li>
+                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Business Administration Discipline</li>
+                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Khulna University</li>
+                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Khulna</li>
+                </ul>
+            </div>
+
+            <!-- Submitted By Box -->
+            <div class="content-box">
+                <p class="label-text"><i class="fas fa-user-graduate"></i>Submitted By:</p>
+                <div class="decorative-line"></div>
+                <ul class="text-base sm:text-lg text-gray-700 space-y-2.5 leading-relaxed">
+                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Md. Moklesur Rahman (EMBA-160343)</li>
+                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>2nd Year, 2nd Term</li>
+                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Business Administration Discipline</li>
+                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Khulna University</li>
+                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Khulna-9208</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="footer-section text-center">
+            <p class="text-lg sm:text-xl font-bold text-gray-800"><i class="far fa-calendar-alt mr-2 text-primary-500"></i>Date of Submission:</p>
+            <p class="text-lg sm:text-xl text-primary-600 font-semibold mt-2 animate-pulse-slow">September 21, 2025</p>
+        </footer>
     </div>
 
-    <div class="course-info">
-      <p><b>Faculty of Veterinary Medicine and Animal Science</b></p>
-    </div>
-
-    <div class="submitted-box">
-      <p><b>Submitted To:</b></p>
-      <p>Dr. Md. Ataur Rahman<br>
-      Professor<br>
-      Dept. of Surgery & Radiology</p>
-
-      <p>Dr. Md. Tuhinur Rahman<br>
-      Assistant Professor<br>
-      Dept. of Surgery & Radiology</p>
-    </div>
-
-    <div class="submittedby-box">
-      <p><b>Submitted By:</b></p>
-      <p>Name: Mahadi Hasan<br>
-      Reg: 21-05-5919<br>
-      Year: 4th<br>
-      Group: A<br>
-      Term: Summer 2024</p>
-    </div>
-
-    <div class="footer">
-      <img src="Gazipur_Agricultural_University_Logo.png" alt="University Logo">
-      <h3>Gazipur Agricultural University</h3>
-    </div>
-  </div>
+    <script>
+        // Add a subtle interactive effect when clicking on the card
+        document.querySelector('.main-card').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.transform = 'scale(0.995)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            }
+        });
+    </script>
 </body>
 </html>
