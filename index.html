@@ -185,10 +185,17 @@
             background: linear-gradient(135deg, #ffffff, #f8fafc);
         }
         
+        /* *************************************************
+        ** দ্বিতীয় বক্সের (Submitted By) জন্য স্টাইল পরিবর্তন **
+        *************************************************
+        */
         .submitted-by-box {
+            /* নতুন স্টাইল: সব টেক্সট বাম দিকে সারিবদ্ধ করা হয়েছে */
+            text-align: left; 
             border-right: 6px solid #2d3748;
             background: white;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            /* Padding ঠিক আছে, পরিবর্তন করা হয়নি */
         }
         
         .box-title {
@@ -223,8 +230,12 @@
         }
         
         .submitted-by-box .info-item {
-            justify-content: flex-end;
+            /* ** পরিবর্তন: এলাইনমেন্ট এখন বাম দিকে, তাই justify-content এবং margin-left অপ্রয়োজনীয় **
+            justify-content: flex-end; 
             margin-left: 30%;
+            */
+            justify-content: flex-start; /* বাম দিকে সারিবদ্ধ করতে */
+            margin-left: 0; /* বাম মার্জিন সরিয়ে দেওয়া হয়েছে */
         }
         
         .footer {
@@ -287,48 +298,6 @@
             transform: translateX(-50%);
             border-radius: 5px;
         }
-
-
-        /* Submitted By Box সুন্দর করার জন্য */
-.submitted-by-box {
-    border-right: 6px solid #2d3748;
-    background: linear-gradient(135deg, #ffffff, #f9fafb);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    text-align: right; /* ডান দিকে সবকিছু align */
-}
-
-.submitted-by-box .box-title {
-    justify-content: flex-end;
-    color: #2d3748;
-    margin-bottom: 20px;
-}
-
-.submitted-by-box .box-title i {
-    margin-left: 10px;
-    margin-right: 0;
-    color: #2d3748;
-}
-
-.submitted-by-box .info-item {
-    justify-content: flex-end;
-    margin: 8px 0;
-    font-size: 15px;
-    color: #2d3748;
-    padding: 6px 12px;
-    background: #edf2f7;
-    border-radius: 8px;
-    display: inline-flex;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-}
-
-.submitted-by-box .info-item i {
-    margin-left: 10px;
-    margin-right: 0;
-    color: #2d3748;
-}
-        
         
         /* Print styles */
         @media print {
@@ -424,13 +393,11 @@
 </head>
 <body>
     <div class="container">
-        <!-- Design Elements -->
         <div class="design-element geometric-1"></div>
         <div class="design-element geometric-2"></div>
         <div class="design-element line-pattern"></div>
         <div class="dot-pattern"></div>
         
-        <!-- Header Section -->
         <div class="header">
             <div class="logo-container">
                 <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Khulna_University_of_Engineering_%26_Technology_logo.png" 
@@ -450,9 +417,7 @@
             <div class="university-name">Khulna University</div>
         </div>
         
-        <!-- Content Section -->
         <div class="content-section">
-            <!-- Submitted To -->
             <div class="info-box submitted-to-box">
                 <div class="box-title">
                     <i class="fas fa-user-tie"></i>Submitted To:
@@ -479,35 +444,33 @@
                 </div>
             </div>
             
-            <!-- Submitted By -->
             <div class="info-box submitted-by-box">
                 <div class="box-title">
                     <i class="fas fa-user-graduate"></i>Submitted By:
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span style="margin-left: 30%;">Md. Moklesur Rahman (EMBA-160343)</span>
+                    <span>Md. Moklesur Rahman (EMBA-160343)</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span style="margin-left: 30%;">2nd Year, 2nd Term</span>
+                    <span>2nd Year, 2nd Term</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span style="margin-left: 30%;">Business Administration Discipline</span>
+                    <span>Business Administration Discipline</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span style="margin-left: 30%;">Khulna University</span>
+                    <span>Khulna University</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span style="margin-left: 30%;">Khulna-9208</span>
+                    <span>Khulna-9208</span>
                 </div>
             </div>
         </div>
         
-        <!-- Footer -->
         <div class="footer">
             <div class="submit-date">
                 Date of Submission: <span class="date-text">September 21, 2025</span>
@@ -515,7 +478,6 @@
             <div class="accent-line"></div>
         </div>
         
-        <!-- Print Button -->
         <button class="print-btn no-print" onclick="window.print()">
             <i class="fas fa-print"></i> Print Cover Page
         </button>
