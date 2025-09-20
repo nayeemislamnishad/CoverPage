@@ -9,27 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @media print {
-            @page {
-                size: A4;
-                margin: 0;
-            }
-            body {
-                width: 210mm;
-                height: 297mm;
-                margin: 0;
-                padding: 0;
-            }
-            .container {
-                width: 100% !important;
-                height: 100% !important;
-                margin: 0 !important;
-                padding: 15mm !important;
-                box-shadow: none !important;
-            }
-            .no-print {
-                display: none !important;
-            }
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
         
         body {
@@ -44,7 +28,8 @@
         }
         
         .container {
-            width: 210mm;
+            width: 100%;
+            max-width: 210mm;
             min-height: 297mm;
             background: white;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
@@ -55,40 +40,50 @@
         
         .design-element {
             position: absolute;
-            opacity: 0.05;
             z-index: 0;
         }
         
-        .circle-1 {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            border: 15px solid #c91d30;
-            top: -80px;
-            right: -80px;
+        .geometric-1 {
+            width: 80px;
+            height: 80px;
+            top: 20px;
+            left: 20px;
+            border: 6px solid rgba(201, 29, 48, 0.15);
+            transform: rotate(45deg);
         }
         
-        .circle-2 {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 12px solid #2d3748;
-            bottom: -70px;
-            left: -70px;
+        .geometric-2 {
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 30px;
+            border: 5px solid rgba(45, 55, 72, 0.1);
+            transform: rotate(20deg);
         }
         
         .line-pattern {
             height: 100%;
-            width: 20px;
-            right: 50px;
+            width: 15px;
+            right: 20px;
             top: 0;
             background: repeating-linear-gradient(
                 to bottom,
                 transparent,
-                transparent 20px,
-                #c91d30 20px,
-                #c91d30 25px
+                transparent 12px,
+                rgba(201, 29, 48, 0.1) 12px,
+                rgba(201, 29, 48, 0.1) 16px
             );
+        }
+        
+        .dot-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(201, 29, 48, 0.1) 1px, transparent 1px);
+            background-size: 12px 12px;
+            opacity: 0.4;
         }
         
         .title-font {
@@ -97,89 +92,107 @@
         
         .header {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             position: relative;
             z-index: 1;
         }
         
         .main-title {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: 800;
             color: #1a202c;
             margin-bottom: 5px;
+            letter-spacing: 0.5px;
         }
         
         .subtitle {
-            font-size: 20px;
+            font-size: 16px;
             color: #4a5568;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            font-style: italic;
         }
         
         .subject {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
             color: #c91d30;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            padding: 8px;
+            display: inline-block;
+            border-bottom: 2px solid #c91d30;
         }
         
         .divider {
             height: 2px;
             background: linear-gradient(to right, transparent, #c91d30, transparent);
-            margin: 20px 0;
+            margin: 15px 0;
         }
         
         .logo-container {
             display: inline-block;
             border: 2px solid #e2e8f0;
             border-radius: 50%;
-            padding: 12px;
-            margin: 15px 0;
+            padding: 10px;
+            margin: 12px 0;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
         
         .logo {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             display: block;
         }
         
         .course-info {
-            font-size: 16px;
+            font-size: 14px;
             color: #2d3748;
-            margin: 10px 0;
+            margin: 8px 0;
+            background: #f8fafc;
+            padding: 8px 16px;
+            border-radius: 30px;
+            display: inline-block;
         }
         
         .content-section {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             position: relative;
             z-index: 1;
         }
         
         .info-box {
-            width: 48%;
-            padding: 20px;
+            padding: 18px;
             background: #f8fafc;
             border-radius: 8px;
-            border-left: 4px solid #c91d30;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+        
+        .submitted-to-box {
+            border-left: 5px solid #c91d30;
+        }
+        
+        .submitted-by-box {
+            border-right: 5px solid #2d3748;
+            background: white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
         }
         
         .box-title {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             color: #c91d30;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
         }
         
         .box-title i {
-            margin-right: 10px;
+            margin-right: 8px;
         }
         
         .info-item {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #2d3748;
             display: flex;
             align-items: flex-start;
@@ -187,9 +200,9 @@
         
         .info-item i {
             color: #c91d30;
-            margin-right: 10px;
+            margin-right: 8px;
             margin-top: 4px;
-            font-size: 14px;
+            font-size: 12px;
         }
         
         .footer {
@@ -200,14 +213,15 @@
         }
         
         .submit-date {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             color: #2d3748;
             display: inline-block;
-            padding: 10px 25px;
+            padding: 10px 20px;
             background: #f8fafc;
             border-radius: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px dashed #c91d30;
         }
         
         .date-text {
@@ -217,17 +231,19 @@
         
         .print-btn {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 20px;
+            right: 20px;
             background: #c91d30;
             color: white;
             border: none;
-            padding: 12px 24px;
+            padding: 12px 20px;
             border-radius: 30px;
             font-weight: 600;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(201, 29, 48, 0.3);
             transition: all 0.3s ease;
+            z-index: 100;
+            font-size: 14px;
         }
         
         .print-btn:hover {
@@ -236,19 +252,119 @@
         }
         
         .university-name {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             color: #2d3748;
-            margin-top: 10px;
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+        }
+        
+        .accent-line {
+            position: absolute;
+            height: 4px;
+            width: 40px;
+            background: #c91d30;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Print styles */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+            .container {
+                width: 100% !important;
+                height: 100% !important;
+                margin: 0 !important;
+                padding: 15mm !important;
+                box-shadow: none !important;
+                max-width: none;
+            }
+            .no-print {
+                display: none !important;
+            }
+            
+            /* Adjust font sizes for print */
+            .main-title {
+                font-size: 32px;
+            }
+            .subject {
+                font-size: 24px;
+            }
+            .info-item {
+                font-size: 15px;
+            }
+        }
+        
+        /* Phone-specific styles */
+        @media (max-width: 480px) {
+            .container {
+                padding: 10mm;
+            }
+            
+            .main-title {
+                font-size: 24px;
+            }
+            
+            .subject {
+                font-size: 20px;
+            }
+            
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .info-box {
+                padding: 15px;
+            }
+            
+            .box-title {
+                font-size: 15px;
+            }
+            
+            .info-item {
+                font-size: 14px;
+            }
+            
+            .geometric-1 {
+                width: 60px;
+                height: 60px;
+                top: 15px;
+                left: 15px;
+            }
+            
+            .geometric-2 {
+                width: 50px;
+                height: 50px;
+                bottom: 30px;
+                right: 20px;
+            }
+            
+            .line-pattern {
+                width: 12px;
+                right: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Design Elements -->
-        <div class="design-element circle-1"></div>
-        <div class="design-element circle-2"></div>
+        <div class="design-element geometric-1"></div>
+        <div class="design-element geometric-2"></div>
         <div class="design-element line-pattern"></div>
+        <div class="dot-pattern"></div>
         
         <!-- Header Section -->
         <div class="header">
@@ -264,8 +380,7 @@
             </div>
             
             <div class="course-info">
-                <p><strong>Course No:</strong> MKT-5521</p>
-                <p><strong>Course Title:</strong> Advertising & Sales Promotion</p>
+                <p><strong>Course No:</strong> MKT-5521 &nbsp;|&nbsp; <strong>Course Title:</strong> Advertising & Sales Promotion</p>
             </div>
             
             <div class="university-name">Khulna University</div>
@@ -274,7 +389,7 @@
         <!-- Content Section -->
         <div class="content-section">
             <!-- Submitted To -->
-            <div class="info-box">
+            <div class="info-box submitted-to-box">
                 <div class="box-title">
                     <i class="fas fa-user-tie"></i>Submitted To:
                 </div>
@@ -301,7 +416,7 @@
             </div>
             
             <!-- Submitted By -->
-            <div class="info-box">
+            <div class="info-box submitted-by-box">
                 <div class="box-title">
                     <i class="fas fa-user-graduate"></i>Submitted By:
                 </div>
@@ -333,6 +448,7 @@
             <div class="submit-date">
                 Date of Submission: <span class="date-text">September 21, 2025</span>
             </div>
+            <div class="accent-line"></div>
         </div>
         
         <!-- Print Button -->
