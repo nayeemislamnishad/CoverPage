@@ -3,303 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McDonald's & Obesity - Assignment Cover</title>
+    <title>Assignment Cover Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#ffe5e7',
-                            100: '#fabac0',
-                            200: '#f18f98',
-                            300: '#e96271',
-                            400: '#e23649',
-                            500: '#c91d30',
-                            600: '#9d1526',
-                            700: '#710e1b',
-                            800: '#460610',
-                            900: '#1e0005',
-                        },
-                        secondary: {
-                            50: '#edf1fc',
-                            100: '#d3d4e1',
-                            200: '#b6b8c9',
-                            300: '#989bb2',
-                            400: '#7c7f9b',
-                            500: '#636582',
-                            600: '#4c4f66',
-                            700: '#363849',
-                            800: '#21222e',
-                            900: '#0a0a16',
-                        },
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
-                }
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                width: 100% !important;
+                height: 100% !important;
+                margin: 0 !important;
+                padding: 15mm !important;
+                box-shadow: none !important;
+            }
+            .no-print {
+                display: none !important;
             }
         }
-    </script>
-    <style>
+        
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #f0f4f8 0%, #e6eef7 100%);
-            min-height: 100vh;
+            background: #f5f7fa;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 2rem;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            padding: 15mm;
             position: relative;
-            overflow-x: hidden;
+            overflow: hidden;
+        }
+        
+        .design-element {
+            position: absolute;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .circle-1 {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 15px solid #c91d30;
+            top: -80px;
+            right: -80px;
+        }
+        
+        .circle-2 {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 12px solid #2d3748;
+            bottom: -70px;
+            left: -70px;
+        }
+        
+        .line-pattern {
+            height: 100%;
+            width: 20px;
+            right: 50px;
+            top: 0;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent,
+                transparent 20px,
+                #c91d30 20px,
+                #c91d30 25px
+            );
         }
         
         .title-font {
             font-family: 'Playfair Display', serif;
         }
         
-        .main-card {
-            background: linear-gradient(to bottom right, #ffffff, #f9fafb);
-            border-radius: 24px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.06);
-            padding: 3.5rem 2.5rem;
-            max-width: 1000px;
-            width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.7);
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
             position: relative;
-            overflow: hidden;
-            z-index: 10;
-        }
-        
-        .main-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(to right, #c91d30, #e23649, #fabac0, #e23649, #c91d30);
-            z-index: 20;
-        }
-        
-        .pattern-dots {
-            background-image: radial-gradient(#c91d30 1.5px, transparent 1.5px);
-            background-size: 18px 18px;
-            opacity: 0.15;
-        }
-        
-        .header-section {
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 2.5rem;
-            margin-bottom: 2.5rem;
-            position: relative;
-        }
-        
-        .content-box {
-            background: linear-gradient(145deg, #ffffff, #fafafa);
-            border-radius: 16px;
-            padding: 2.5rem 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: all 0.4s ease;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .content-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: linear-gradient(to bottom, #c91d30, #e23649);
-        }
-        
-        .content-box:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-        
-        .content-box:hover::before {
-            background: linear-gradient(to bottom, #c91d30, #e23649, #fabac0);
-        }
-        
-        .label-text {
-            color: #c91d30;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .decorative-line {
-            background: linear-gradient(to right, #c91d30, #e23649);
-            height: 3px;
-            width: 60px;
-            border-radius: 9999px;
-            margin: 0.75rem 0 1.5rem 0;
-        }
-        
-        .university-logo {
-            transition: all 0.5s ease;
-            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
-        }
-        
-        .university-logo:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.2));
-        }
-        
-        .floating-element {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, rgba(201, 29, 48, 0.1) 0%, rgba(226, 54, 73, 0.15) 100%);
-            border-radius: 50%;
             z-index: 1;
         }
         
-        .floating-element:nth-child(1) {
-            top: 10%;
-            left: 5%;
-            width: 120px;
-            height: 120px;
-            animation: float 8s ease-in-out infinite;
+        .main-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 5px;
         }
         
-        .floating-element:nth-child(2) {
-            bottom: 15%;
-            right: 7%;
+        .subtitle {
+            font-size: 20px;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+        
+        .subject {
+            font-size: 28px;
+            font-weight: 700;
+            color: #c91d30;
+            margin-bottom: 20px;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #c91d30, transparent);
+            margin: 20px 0;
+        }
+        
+        .logo-container {
+            display: inline-block;
+            border: 2px solid #e2e8f0;
+            border-radius: 50%;
+            padding: 12px;
+            margin: 15px 0;
+        }
+        
+        .logo {
             width: 80px;
             height: 80px;
-            animation: float 7s ease-in-out infinite 1s;
+            display: block;
         }
         
-        .floating-element:nth-child(3) {
-            top: 25%;
-            right: 10%;
-            width: 60px;
-            height: 60px;
-            animation: float 9s ease-in-out infinite 0.5s;
+        .course-info {
+            font-size: 16px;
+            color: #2d3748;
+            margin: 10px 0;
         }
         
-        .footer-section {
-            background: linear-gradient(to right, #f8f9fa, #f1f3f5);
-            border-radius: 16px;
-            padding: 1.5rem 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.8);
+        .content-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
         }
         
-        @media (max-width: 768px) {
-            .main-card {
-                padding: 2rem 1.5rem;
-            }
-            
-            .content-box {
-                padding: 1.75rem 1.5rem;
-            }
-            
-            .header-section h1 {
-                font-size: 2.5rem !important;
-            }
-            
-            .header-section h2 {
-                font-size: 2rem !important;
-            }
+        .info-box {
+            width: 48%;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #c91d30;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .box-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #c91d30;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .box-title i {
+            margin-right: 10px;
+        }
+        
+        .info-item {
+            margin-bottom: 10px;
+            color: #2d3748;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .info-item i {
+            color: #c91d30;
+            margin-right: 10px;
+            margin-top: 4px;
+            font-size: 14px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .submit-date {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            display: inline-block;
+            padding: 10px 25px;
+            background: #f8fafc;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .date-text {
+            color: #c91d30;
+            font-weight: 700;
+        }
+        
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #c91d30;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(201, 29, 48, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            background: #a31a28;
+            transform: translateY(-2px);
+        }
+        
+        .university-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Background elements -->
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    
-    <div class="main-card">
+    <div class="container">
+        <!-- Design Elements -->
+        <div class="design-element circle-1"></div>
+        <div class="design-element circle-2"></div>
+        <div class="design-element line-pattern"></div>
+        
         <!-- Header Section -->
-        <header class="header-section text-center">
-            <div class="pattern-dots absolute top-0 left-0 w-full h-full pointer-events-none"></div>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight title-font">An Assignment</h1>
-            <div class="flex items-center justify-center my-4">
-                <div class="decorative-line mx-4"></div>
-                <p class="text-xl sm:text-2xl text-gray-600 font-medium"><i class="fas fa-book-open mr-2 text-primary-500"></i>on</p>
-                <div class="decorative-line mx-4"></div>
-            </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-1 title-font">McDonald's and Obesity</h2>
+        <div class="header">
+            <h1 class="main-title title-font">AN ASSIGNMENT</h1>
+            <p class="subtitle">on</p>
+            <h2 class="subject title-font">McDonald's and Obesity</h2>
             
-            <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Khulna_University_of_Engineering_%26_Technology_logo.png" 
-                 alt="University Logo" 
-                 class="mx-auto w-28 sm:w-36 my-8 university-logo">
-                 
-            <div class="text-lg sm:text-xl text-gray-800 font-semibold max-w-2xl mx-auto">
-                <p class="mb-2"><i class="fas fa-book mr-2 text-primary-500"></i>Course No: MKT-5521</p>
-                <p><i class="fas fa-chalkboard-teacher mr-2 text-primary-500"></i>Course Title: Advertising & Sales Promotion</p>
+            <div class="divider"></div>
+            
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Khulna_University_of_Engineering_%26_Technology_logo.png" 
+                     alt="University Logo" class="logo">
             </div>
-        </header>
-
-        <!-- Content Boxes -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-12">
-            <!-- Submitted To Box -->
-            <div class="content-box">
-                <p class="label-text"><i class="fas fa-user-tie"></i>Submitted To:</p>
-                <div class="decorative-line"></div>
-                <ul class="text-base sm:text-lg text-gray-700 space-y-2.5 leading-relaxed">
-                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Mr. S.M. Arifuzzaman</li>
-                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Associate Professor</li>
-                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Business Administration Discipline</li>
-                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Khulna University</li>
-                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Khulna</li>
-                </ul>
+            
+            <div class="course-info">
+                <p><strong>Course No:</strong> MKT-5521</p>
+                <p><strong>Course Title:</strong> Advertising & Sales Promotion</p>
             </div>
-
-            <!-- Submitted By Box -->
-            <div class="content-box">
-                <p class="label-text"><i class="fas fa-user-graduate"></i>Submitted By:</p>
-                <div class="decorative-line"></div>
-                <ul class="text-base sm:text-lg text-gray-700 space-y-2.5 leading-relaxed">
-                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Md. Moklesur Rahman (EMBA-160343)</li>
-                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>2nd Year, 2nd Term</li>
-                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Business Administration Discipline</li>
-                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Khulna University</li>
-                    <li class="flex items-start"><i class="fas fa-caret-right text-primary-500 mt-1 mr-2"></i>Khulna-9208</li>
-                </ul>
+            
+            <div class="university-name">Khulna University</div>
+        </div>
+        
+        <!-- Content Section -->
+        <div class="content-section">
+            <!-- Submitted To -->
+            <div class="info-box">
+                <div class="box-title">
+                    <i class="fas fa-user-tie"></i>Submitted To:
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Mr. S.M. Arifuzzaman</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Associate Professor</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Business Administration Discipline</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Khulna University</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Khulna</span>
+                </div>
+            </div>
+            
+            <!-- Submitted By -->
+            <div class="info-box">
+                <div class="box-title">
+                    <i class="fas fa-user-graduate"></i>Submitted By:
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Md. Moklesur Rahman (EMBA-160343)</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>2nd Year, 2nd Term</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Business Administration Discipline</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Khulna University</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Khulna-9208</span>
+                </div>
             </div>
         </div>
-
-        <!-- Footer Section -->
-        <footer class="footer-section text-center">
-            <p class="text-lg sm:text-xl font-bold text-gray-800"><i class="far fa-calendar-alt mr-2 text-primary-500"></i>Date of Submission:</p>
-            <p class="text-lg sm:text-xl text-primary-600 font-semibold mt-2 animate-pulse-slow">September 21, 2025</p>
-        </footer>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="submit-date">
+                Date of Submission: <span class="date-text">September 21, 2025</span>
+            </div>
+        </div>
+        
+        <!-- Print Button -->
+        <button class="print-btn no-print" onclick="window.print()">
+            <i class="fas fa-print"></i> Print Cover Page
+        </button>
     </div>
-
-    <script>
-        // Add a subtle interactive effect when clicking on the card
-        document.querySelector('.main-card').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.style.transform = 'scale(0.995)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 150);
-            }
-        });
-    </script>
 </body>
 </html>
