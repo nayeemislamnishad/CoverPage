@@ -6,7 +6,7 @@
     <title>Assignment Cover Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Base styles */
@@ -17,25 +17,26 @@
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: #f5f7fa;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e0e7ff, #f5f7fa);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             padding: 20px;
+            overflow-x: hidden;
         }
         
         .container {
-            width: 100%;
-            max-width: 210mm;
-            min-height: 297mm;
+            width: 210mm;
+            height: 297mm;
             background: white;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-            padding: 15mm;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 20mm;
             position: relative;
             overflow: hidden;
+            border-radius: 12px;
         }
         
         .design-element {
@@ -44,34 +45,38 @@
         }
         
         .geometric-1 {
-            width: 80px;
-            height: 80px;
-            top: 20px;
-            left: 20px;
-            border: 6px solid rgba(201, 29, 48, 0.15);
+            width: 120px;
+            height: 120px;
+            top: -20px;
+            left: -20px;
+            border: 8px solid rgba(201, 29, 48, 0.2);
             transform: rotate(45deg);
+            border-radius: 20px;
+            background: linear-gradient(45deg, rgba(201, 29, 48, 0.1), transparent);
         }
         
         .geometric-2 {
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 30px;
-            border: 5px solid rgba(45, 55, 72, 0.1);
-            transform: rotate(20deg);
+            width: 100px;
+            height: 100px;
+            bottom: -10px;
+            right: -10px;
+            border: 6px solid rgba(45, 55, 72, 0.15);
+            transform: rotate(30deg);
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(45, 55, 72, 0.1), transparent);
         }
         
         .line-pattern {
             height: 100%;
-            width: 15px;
-            right: 20px;
+            width: 20px;
+            right: 0;
             top: 0;
             background: repeating-linear-gradient(
                 to bottom,
                 transparent,
-                transparent 12px,
-                rgba(201, 29, 48, 0.1) 12px,
-                rgba(201, 29, 48, 0.1) 16px
+                transparent 15px,
+                rgba(201, 29, 48, 0.2) 15px,
+                rgba(201, 29, 48, 0.2) 20px
             );
         }
         
@@ -81,9 +86,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: radial-gradient(rgba(201, 29, 48, 0.1) 1px, transparent 1px);
-            background-size: 12px 12px;
-            opacity: 0.4;
+            background-image: radial-gradient(rgba(201, 29, 48, 0.15) 1.5px, transparent 1.5px);
+            background-size: 15px 15px;
+            opacity: 0.3;
         }
         
         .title-font {
@@ -92,181 +97,195 @@
         
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             position: relative;
             z-index: 1;
         }
         
         .main-title {
-            font-size: 28px;
-            font-weight: 800;
+            font-size: 36px;
+            font-weight: 900;
             color: #1a202c;
-            margin-bottom: 5px;
-            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
         }
         
         .subtitle {
-            font-size: 16px;
+            font-size: 18px;
             color: #4a5568;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             font-style: italic;
+            font-weight: 400;
         }
         
         .subject {
-            font-size: 22px;
-            font-weight: 700;
+            font-size: 28px;
+            font-weight: 800;
             color: #c91d30;
-            margin-bottom: 15px;
-            padding: 8px;
+            margin-bottom: 20px;
+            padding: 10px;
             display: inline-block;
-            border-bottom: 2px solid #c91d30;
+            border-bottom: 3px solid #c91d30;
+            position: relative;
         }
         
         .divider {
-            height: 2px;
+            height: 3px;
             background: linear-gradient(to right, transparent, #c91d30, transparent);
-            margin: 15px 0;
+            margin: 20px 0;
         }
         
         .logo-container {
-            display: inline-block;
-            border: 2px solid #e2e8f0;
+            display: block;
+            margin: 0 auto 20px;
+            border: 3px solid #e2e8f0;
             border-radius: 50%;
-            padding: 10px;
-            margin: 12px 0;
+            padding: 12px;
             background: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            width: fit-content;
         }
         
         .logo {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             display: block;
+            border-radius: 50%;
         }
         
         .course-info {
-            font-size: 14px;
+            font-size: 15px;
             color: #2d3748;
-            margin: 8px 0;
+            margin: 10px 0;
             background: #f8fafc;
-            padding: 8px 16px;
-            border-radius: 30px;
+            padding: 10px 20px;
+            border-radius: 50px;
             display: inline-block;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
         }
         
         .content-section {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             position: relative;
             z-index: 1;
         }
         
         .info-box {
-            padding: 18px;
+            padding: 20px;
             background: #f8fafc;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
         }
         
         .submitted-to-box {
-            border-left: 5px solid #c91d30;
+            border-left: 6px solid #c91d30;
+            background: linear-gradient(135deg, #ffffff, #f8fafc);
         }
         
         .submitted-by-box {
-            border-right: 5px solid #2d3748;
+            border-right: 6px solid #2d3748;
             background: white;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
         
         .box-title {
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 700;
             color: #c91d30;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
+            text-transform: uppercase;
         }
         
         .box-title i {
-            margin-right: 8px;
+            margin-right: 10px;
+            font-size: 20px;
         }
         
         .info-item {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: #2d3748;
             display: flex;
             align-items: flex-start;
+            font-size: 15px;
         }
         
         .info-item i {
             color: #c91d30;
-            margin-right: 8px;
+            margin-right: 10px;
             margin-top: 4px;
-            font-size: 12px;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .submitted-by-box .info-item {
+            justify-content: flex-end;
+            margin-left: 30%;
         }
         
         .footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
             position: relative;
             z-index: 1;
         }
         
         .submit-date {
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 700;
             color: #2d3748;
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background: #f8fafc;
-            border-radius: 30px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border: 1px dashed #c91d30;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 2px dashed #c91d30;
         }
         
         .date-text {
             color: #c91d30;
-            font-weight: 700;
+            font-weight: 800;
         }
         
         .print-btn {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #c91d30;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #c91d30, #e53e4d);
             color: white;
             border: none;
-            padding: 12px 20px;
-            border-radius: 30px;
-            font-weight: 600;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(201, 29, 48, 0.3);
-            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(201, 29, 48, 0.4);
             z-index: 100;
-            font-size: 14px;
-        }
-        
-        .print-btn:hover {
-            background: #a31a28;
-            transform: translateY(-2px);
+            font-size: 16px;
         }
         
         .university-name {
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 700;
             color: #2d3748;
-            margin-top: 8px;
-            letter-spacing: 0.5px;
+            margin-top: 10px;
+            letter-spacing: 1px;
+            position: relative;
+            text-transform: uppercase;
         }
         
         .accent-line {
             position: absolute;
-            height: 4px;
-            width: 40px;
-            background: #c91d30;
-            bottom: -5px;
+            height: 5px;
+            width: 50px;
+            background: linear-gradient(90deg, #c91d30, #e53e4d);
+            bottom: -8px;
             left: 50%;
             transform: translateX(-50%);
+            border-radius: 5px;
         }
         
         /* Print styles */
@@ -283,77 +302,80 @@
                 background: white;
             }
             .container {
-                width: 100% !important;
-                height: 100% !important;
-                margin: 0 !important;
-                padding: 15mm !important;
-                box-shadow: none !important;
-                max-width: none;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 15mm;
+                box-shadow: none;
+                border-radius: 0;
             }
             .no-print {
                 display: none !important;
             }
-            
-            /* Adjust font sizes for print */
             .main-title {
-                font-size: 32px;
+                font-size: 40px;
             }
             .subject {
-                font-size: 24px;
+                font-size: 30px;
             }
             .info-item {
-                font-size: 15px;
+                font-size: 16px;
+            }
+            .submit-date {
+                border: 1px dashed #c91d30;
             }
         }
         
         /* Phone-specific styles */
         @media (max-width: 480px) {
             .container {
-                padding: 10mm;
+                padding: 12mm;
+                border-radius: 8px;
             }
-            
             .main-title {
-                font-size: 24px;
+                font-size: 28px;
             }
-            
             .subject {
-                font-size: 20px;
+                font-size: 22px;
             }
-            
             .logo {
-                width: 60px;
-                height: 60px;
+                width: 70px;
+                height: 70px;
             }
-            
             .info-box {
                 padding: 15px;
             }
-            
             .box-title {
-                font-size: 15px;
+                font-size: 16px;
             }
-            
             .info-item {
                 font-size: 14px;
             }
-            
             .geometric-1 {
-                width: 60px;
-                height: 60px;
-                top: 15px;
-                left: 15px;
+                width: 80px;
+                height: 80px;
+                top: 10px;
+                left: 10px;
             }
-            
             .geometric-2 {
-                width: 50px;
-                height: 50px;
-                bottom: 30px;
+                width: 70px;
+                height: 70px;
+                bottom: 20px;
                 right: 20px;
             }
-            
             .line-pattern {
-                width: 12px;
-                right: 15px;
+                width: 15px;
+                right: 10px;
+            }
+            .submit-date {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            .print-btn {
+                padding: 12px 20px;
+                font-size: 14px;
+                bottom: 20px;
+                right: 20px;
             }
         }
     </style>
@@ -368,19 +390,19 @@
         
         <!-- Header Section -->
         <div class="header">
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Khulna_University_of_Engineering_%26_Technology_logo.png" 
+                     alt="University Logo" class="logo">
+            </div>
             <h1 class="main-title title-font">AN ASSIGNMENT</h1>
             <p class="subtitle">on</p>
             <h2 class="subject title-font">McDonald's and Obesity</h2>
             
             <div class="divider"></div>
             
-            <div class="logo-container">
-                <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Khulna_University_of_Engineering_%26_Technology_logo.png" 
-                     alt="University Logo" class="logo">
-            </div>
-            
             <div class="course-info">
-                <p><strong>Course No:</strong> MKT-5521 &nbsp;|&nbsp; <strong>Course Title:</strong> Advertising & Sales Promotion</p>
+                <p><strong>Course No:</strong> MKT-5521</p>
+                <p><strong>Course Title:</strong> Advertising & Sales Promotion</p>
             </div>
             
             <div class="university-name">Khulna University</div>
@@ -422,23 +444,23 @@
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span>Md. Moklesur Rahman (EMBA-160343)</span>
+                    <span style="margin-left: 30%;">Md. Moklesur Rahman (EMBA-160343)</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span>2nd Year, 2nd Term</span>
+                    <span style="margin-left: 30%;">2nd Year, 2nd Term</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span>Business Administration Discipline</span>
+                    <span style="margin-left: 30%;">Business Administration Discipline</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span>Khulna University</span>
+                    <span style="margin-left: 30%;">Khulna University</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span>Khulna-9208</span>
+                    <span style="margin-left: 30%;">Khulna-9208</span>
                 </div>
             </div>
         </div>
