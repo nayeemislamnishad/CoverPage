@@ -34,7 +34,7 @@
             background: white;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             padding: 20mm;
-            padding-top:20mm;
+            padding-top: 5mm; /* Reduced top padding to minimize space above logo */
             position: relative;
             overflow: hidden;
             border-radius: 12px;
@@ -48,8 +48,8 @@
         .geometric-1 {
             width: 120px;
             height: 120px;
-            top: -20px;
-            left: -20px;
+            top: 0; /* Adjusted to align with top edge */
+            left: 0;
             border: 8px solid rgba(201, 29, 48, 0.2);
             transform: rotate(45deg);
             border-radius: 20px;
@@ -140,9 +140,7 @@
         
         .logo-container {
             display: block;
-            margin: 0 auto 20px;
-            margin-top:0px;
-            margin-bottom:5px;
+            margin: 0 auto; /* Center horizontally, no top/bottom margin */
             border: 3px solid #e2e8f0;
             border-radius: 50%;
             padding: 12px;
@@ -188,17 +186,11 @@
             background: linear-gradient(135deg, #ffffff, #f8fafc);
         }
         
-        /* *************************************************
-        ** দ্বিতীয় বক্সের (Submitted By) জন্য স্টাইল পরিবর্তন **
-        *************************************************
-        */
         .submitted-by-box {
-            /* নতুন স্টাইল: সব টেক্সট বাম দিকে সারিবদ্ধ করা হয়েছে */
-            text-align: left; 
+            text-align: left;
             border-right: 6px solid #2d3748;
             background: white;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            /* Padding ঠিক আছে, পরিবর্তন করা হয়নি */
         }
         
         .box-title {
@@ -233,12 +225,8 @@
         }
         
         .submitted-by-box .info-item {
-            /* ** পরিবর্তন: এলাইনমেন্ট এখন বাম দিকে, তাই justify-content এবং margin-left অপ্রয়োজনীয় **
-            justify-content: flex-end; 
-            margin-left: 30%;
-            */
-            justify-content: flex-start; /* বাম দিকে সারিবদ্ধ করতে */
-            margin-left: 0; /* বাম মার্জিন সরিয়ে দেওয়া হয়েছে */
+            justify-content: flex-start;
+            margin-left: 0;
         }
         
         .footer {
@@ -403,14 +391,11 @@
         
         <div class="header">
             <div class="logo-container">
-                <img src="Lgo.png" 
-                     alt="University Logo" class="logo">
+                <img src="Lgo.png" alt="University Logo" class="logo">
             </div>
             <h3 class="main-title title-font">AN ASSIGNMENT</h3>
             <p class="subtitle">on</p>
             <h4 class="subject title-font">Laboratory Biosecurity: Risk Assessment, Biosafety Levels, and Physical Security Measures</h4>
-            
-       <!--    <div class="divider"></div> --> 
             
             <div class="course-info">
                 <p><strong>Course No:</strong> MKT-5521</p>
