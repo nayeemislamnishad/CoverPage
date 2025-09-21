@@ -24,7 +24,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 10px;
+            padding: 20px;
             overflow-x: hidden;
         }
         
@@ -33,8 +33,8 @@
             height: 297mm;
             background: white;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            padding: 10mm; /* Reduced padding for more content space */
-            padding-top: 5mm; /* Minimal top padding to avoid space above logo */
+            padding: 20mm;
+            padding-top: 5mm; /* Reduced top padding to minimize space above logo */
             position: relative;
             overflow: hidden;
             border-radius: 12px;
@@ -46,22 +46,22 @@
         }
         
         .geometric-1 {
-            width: 100px;
-            height: 100px;
-            top: 0;
+            width: 120px;
+            height: 120px;
+            top: 0; /* Adjusted to align with top edge */
             left: 0;
-            border: 6px solid rgba(201, 29, 48, 0.2);
+            border: 8px solid rgba(201, 29, 48, 0.2);
             transform: rotate(45deg);
-            border-radius: 15px;
+            border-radius: 20px;
             background: linear-gradient(45deg, rgba(201, 29, 48, 0.1), transparent);
         }
         
         .geometric-2 {
-            width: 80px;
-            height: 80px;
-            bottom: 0;
-            right: 0;
-            border: 5px solid rgba(45, 55, 72, 0.15);
+            width: 100px;
+            height: 100px;
+            bottom: -10px;
+            right: -10px;
+            border: 6px solid rgba(45, 55, 72, 0.15);
             transform: rotate(30deg);
             border-radius: 50%;
             background: radial-gradient(circle, rgba(45, 55, 72, 0.1), transparent);
@@ -69,15 +69,15 @@
         
         .line-pattern {
             height: 100%;
-            width: 15px;
+            width: 20px;
             right: 0;
             top: 0;
             background: repeating-linear-gradient(
                 to bottom,
                 transparent,
-                transparent 10px,
-                rgba(201, 29, 48, 0.2) 10px,
-                rgba(201, 29, 48, 0.2) 15px
+                transparent 15px,
+                rgba(201, 29, 48, 0.2) 15px,
+                rgba(201, 29, 48, 0.2) 20px
             );
         }
         
@@ -87,8 +87,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: radial-gradient(rgba(201, 29, 48, 0.15) 1px, transparent 1px);
-            background-size: 10px 10px;
+            background-image: radial-gradient(rgba(201, 29, 48, 0.15) 1.5px, transparent 1.5px);
+            background-size: 15px 15px;
             opacity: 0.3;
         }
         
@@ -98,23 +98,23 @@
         
         .header {
             text-align: center;
-            margin-bottom: 15px; /* Reduced margin for compactness */
+            margin-bottom: 30px;
             position: relative;
             z-index: 1;
         }
         
         .main-title {
-            font-size: 30px; /* Reduced font size */
+            font-size: 36px;
             font-weight: 900;
             color: #1a202c;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             letter-spacing: 1px;
             text-transform: uppercase;
             position: relative;
         }
         
         .subtitle {
-            font-size: 14px; /* Reduced font size */
+            font-size: 18px;
             color: #4a5568;
             margin-bottom: 5px;
             font-style: italic;
@@ -122,105 +122,105 @@
         }
         
         .subject {
-            font-size: 20px; /* Reduced font size */
+            font-size: 28px;
             font-weight: 800;
             color: #c91d30;
-            margin-bottom: 10px;
-            padding: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
             display: inline-block;
-            border-bottom: 2px solid #c91d30;
+            border-bottom: 3px solid #c91d30;
             position: relative;
         }
         
         .divider {
-            height: 2px;
+            height: 3px;
             background: linear-gradient(to right, transparent, #c91d30, transparent);
-            margin: 10px 0; /* Reduced margin */
+            margin: 20px 0;
         }
         
         .logo-container {
             display: block;
-            margin: 0 auto; /* No top/bottom margin */
-            border: 2px solid #e2e8f0;
+            margin: 0 auto; /* Center horizontally, no top/bottom margin */
+            border: 3px solid #e2e8f0;
             border-radius: 50%;
-            padding: 8px; /* Reduced padding */
+            padding: 12px;
             background: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             width: fit-content;
         }
         
         .logo {
-            width: 60px; /* Reduced logo size */
-            height: 60px;
+            width: 80px;
+            height: 80px;
             display: block;
             border-radius: 50%;
         }
         
         .course-info {
-            font-size: 12px; /* Reduced font size */
+            font-size: 15px;
             color: #2d3748;
-            margin: 5px 0;
+            margin: 10px 0;
             background: #f8fafc;
-            padding: 8px 15px;
-            border-radius: 25px;
+            padding: 10px 20px;
+            border-radius: 50px;
             display: inline-block;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
         }
         
         .content-section {
-            margin-bottom: 15px; /* Reduced margin */
+            margin-bottom: 30px;
             position: relative;
             z-index: 1;
         }
         
         .info-box {
-            padding: 10px; /* Reduced padding */
+            padding: 20px;
             background: #f8fafc;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            margin-bottom: 15px; /* Reduced margin */
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
         }
         
         .submitted-to-box {
-            border-left: 4px solid #c91d30;
+            border-left: 6px solid #c91d30;
             background: linear-gradient(135deg, #ffffff, #f8fafc);
         }
         
         .submitted-by-box {
             text-align: left;
-            border-right: 4px solid #2d3748;
+            border-right: 6px solid #2d3748;
             background: white;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
         
         .box-title {
-            font-size: 14px; /* Reduced font size */
+            font-size: 18px;
             font-weight: 700;
             color: #c91d30;
-            margin-bottom: 8px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             text-transform: uppercase;
         }
         
         .box-title i {
-            margin-right: 8px;
-            font-size: 16px;
+            margin-right: 10px;
+            font-size: 20px;
         }
         
         .info-item {
-            margin-bottom: 6px; /* Reduced margin */
+            margin-bottom: 10px;
             color: #2d3748;
             display: flex;
             align-items: flex-start;
-            font-size: 12px; /* Reduced font size */
+            font-size: 15px;
         }
         
         .info-item i {
             color: #c91d30;
-            margin-right: 8px;
-            margin-top: 3px;
-            font-size: 12px;
+            margin-right: 10px;
+            margin-top: 4px;
+            font-size: 14px;
             flex-shrink: 0;
         }
         
@@ -231,21 +231,21 @@
         
         .footer {
             text-align: center;
-            margin-top: 20px; /* Reduced margin */
+            margin-top: 40px;
             position: relative;
             z-index: 1;
         }
         
         .submit-date {
-            font-size: 14px; /* Reduced font size */
+            font-size: 18px;
             font-weight: 700;
             color: #2d3748;
             display: inline-block;
-            padding: 8px 20px;
+            padding: 12px 25px;
             background: #f8fafc;
-            border-radius: 25px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            border: 1px dashed #c91d30;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 2px dashed #c91d30;
         }
         
         .date-text {
@@ -255,25 +255,25 @@
         
         .print-btn {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
             background: linear-gradient(45deg, #c91d30, #e53e4d);
             color: white;
             border: none;
-            padding: 12px 20px;
+            padding: 15px 25px;
             border-radius: 50px;
             font-weight: 700;
             cursor: pointer;
             box-shadow: 0 6px 20px rgba(201, 29, 48, 0.4);
             z-index: 100;
-            font-size: 14px;
+            font-size: 16px;
         }
         
         .university-name {
-            font-size: 14px; /* Reduced font size */
+            font-size: 18px;
             font-weight: 700;
             color: #2d3748;
-            margin-top: 5px;
+            margin-top: 10px;
             letter-spacing: 1px;
             position: relative;
             text-transform: uppercase;
@@ -281,20 +281,20 @@
         
         .accent-line {
             position: absolute;
-            height: 4px;
-            width: 40px;
+            height: 5px;
+            width: 50px;
             background: linear-gradient(90deg, #c91d30, #e53e4d);
-            bottom: -6px;
+            bottom: -8px;
             left: 50%;
             transform: translateX(-50%);
-            border-radius: 4px;
+            border-radius: 5px;
         }
         
         /* Print styles */
         @media print {
             @page {
                 size: A4;
-                margin: 0; /* No page margins */
+                margin: 0;
             }
             body {
                 width: 210mm;
@@ -304,10 +304,10 @@
                 background: white;
             }
             .container {
-                width: 210mm;
-                height: 297mm;
+                width: 100%;
+                height: 100%;
                 margin: 0;
-                padding: 8mm; /* Reduced padding for print */
+                padding: 15mm;
                 box-shadow: none;
                 border-radius: 0;
             }
@@ -315,104 +315,69 @@
                 display: none !important;
             }
             .main-title {
-                font-size: 28px; /* Slightly smaller for print */
+                font-size: 40px;
             }
             .subject {
-                font-size: 18px;
-            }
-            .subtitle {
-                font-size: 12px;
-            }
-            .course-info {
-                font-size: 11px;
-                padding: 6px 12px;
+                font-size: 30px;
             }
             .info-item {
-                font-size: 11px;
-            }
-            .box-title {
-                font-size: 13px;
+                font-size: 16px;
             }
             .submit-date {
-                font-size: 12px;
-                padding: 6px 15px;
                 border: 1px dashed #c91d30;
-            }
-            .university-name {
-                font-size: 13px;
-            }
-            .logo {
-                width: 50px;
-                height: 50px;
-            }
-            .logo-container {
-                padding: 6px;
-            }
-            .info-box {
-                padding: 8px;
-                margin-bottom: 10px;
-            }
-            .header {
-                margin-bottom: 10px;
-            }
-            .content-section {
-                margin-bottom: 10px;
-            }
-            .footer {
-                margin-top: 15px;
             }
         }
         
         /* Phone-specific styles */
         @media (max-width: 480px) {
             .container {
-                padding: 8mm;
+                padding: 12mm;
                 border-radius: 8px;
             }
             .main-title {
-                font-size: 24px;
+                font-size: 28px;
             }
             .subject {
-                font-size: 18px;
+                font-size: 22px;
             }
             .logo {
-                width: 50px;
-                height: 50px;
-            }
-            .info-box {
-                padding: 10px;
-            }
-            .box-title {
-                font-size: 13px;
-            }
-            .info-item {
-                font-size: 11px;
-            }
-            .geometric-1 {
                 width: 70px;
                 height: 70px;
-                top: 5px;
-                left: 5px;
+            }
+            .info-box {
+                padding: 15px;
+            }
+            .box-title {
+                font-size: 16px;
+            }
+            .info-item {
+                font-size: 14px;
+            }
+            .geometric-1 {
+                width: 80px;
+                height: 80px;
+                top: 10px;
+                left: 10px;
             }
             .geometric-2 {
-                width: 60px;
-                height: 60px;
-                bottom: 10px;
-                right: 10px;
+                width: 70px;
+                height: 70px;
+                bottom: 20px;
+                right: 20px;
             }
             .line-pattern {
-                width: 12px;
-                right: 5px;
+                width: 15px;
+                right: 10px;
             }
             .submit-date {
-                font-size: 12px;
-                padding: 8px 15px;
+                font-size: 16px;
+                padding: 10px 20px;
             }
             .print-btn {
-                padding: 10px 15px;
-                font-size: 12px;
-                bottom: 15px;
-                right: 15px;
+                padding: 12px 20px;
+                font-size: 14px;
+                bottom: 20px;
+                right: 20px;
             }
         }
     </style>
@@ -459,7 +424,7 @@
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span><b>Dr. Md. Sayedul Islam</b></span>
+                    <span><b>DR. Md. Sayedul Islam</b></span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
@@ -485,7 +450,7 @@
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
-                    <span>Reg. No: 25-05-7900</span>
+                    <span>Reg. No:25-05-7900</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chevron-right"></i>
